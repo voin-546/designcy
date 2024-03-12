@@ -35,6 +35,11 @@ body a.back-to-top {
   right: 20px;
   bottom: 40px;
   z-index: 1;
+  transition: 0.3s;
+}
+body a.back-to-top.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 body a.back-to-top lord-icon {
   width: 70px;

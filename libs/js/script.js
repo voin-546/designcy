@@ -43,3 +43,12 @@ burger.onclick = function () {
     header.classList.toggle("show");
     burger.classList.toggle("open");
 }
+window.addEventListener("scroll", function () {
+    let btnUp = document.querySelector(".back-to-top")
+    if (window.pageYOffset > 475) {
+        btnUp.classList.remove("hidden");
+    } 
+    else {
+        btnUp.classList.add("hidden");
+    }
+})

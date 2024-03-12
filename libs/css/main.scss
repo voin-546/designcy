@@ -24,6 +24,11 @@ body {
         right: 20px;
         bottom: 40px;
         z-index: 1;
+        transition: .3s;
+        &.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
         lord-icon {
             width: 70px;
             height: 70px;
