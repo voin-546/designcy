@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: v 100px;
 }
 
 ::-webkit-scrollbar {
@@ -60,8 +60,8 @@ body.dark {
   background: #252626;
 }
 body.dark section.hero-area header {
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   background-color: transparent;
 }
 body.dark section.hero-area header a.logo {
@@ -219,7 +219,7 @@ section.hero-area header {
   }
 }
 section.hero-area header.show {
-  height: 420px;
+  height: 440px;
 }
 @media (min-width: 1051px) {
   section.hero-area header.show {
@@ -227,7 +227,7 @@ section.hero-area header.show {
   }
 }
 section.hero-area header.show nav {
-  height: 340px;
+  height: 360px;
 }
 section.hero-area header a {
   transition: color 0.5s;
@@ -301,6 +301,7 @@ section.hero-area header nav {
     transition: height 0.5s;
     height: 0;
     overflow: hidden;
+    gap: 20px;
   }
 }
 section.hero-area header nav ul {
@@ -467,20 +468,21 @@ section.cards {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   section.cards {
     justify-content: center;
-  }
-}
-@media (min-width: 575px) and (max-width: 768px) {
-  section.cards {
     gap: 0 20px;
   }
 }
-@media (min-width: 769px) and (max-width: 842px) {
+@media (max-width: 1120px) {
   section.cards {
-    justify-content: center;
-    gap: 30px;
+    gap: 0 10px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1060px) {
+  section.cards {
+    padding: 0 20%;
+    gap: 20px;
   }
 }
 @media (min-width: 843px) and (max-width: 992px) {
@@ -489,10 +491,15 @@ section.cards {
     gap: 20px;
   }
 }
-@media (min-width: 993px) and (max-width: 1060px) {
+@media (min-width: 769px) and (max-width: 842px) {
   section.cards {
-    padding: 0 20%;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (min-width: 575px) and (max-width: 768px) {
+  section.cards {
+    gap: 0 20px;
   }
 }
 section.cards .card {
@@ -627,8 +634,18 @@ section.watch .overlay {
   padding: 125px 0 128px;
 }
 @media (max-width: 768px) {
+  section.watch .overlay svg {
+    scale: 0.7;
+  }
+}
+@media (max-width: 768px) {
   section.watch .overlay {
-    padding: 125px 20px 128px;
+    padding: 75px 20px;
+  }
+}
+@media (max-width: 575px) {
+  section.watch .overlay {
+    padding: 35px 10px;
   }
 }
 section.watch .overlay h2 {
@@ -638,6 +655,11 @@ section.watch .overlay p {
   width: min(100%, 765px);
   font: 400 16px/160% var(--font-family);
   margin: 20px auto 36px;
+}
+@media (max-width: 768px) {
+  section.watch .overlay p {
+    margin-block-end: 16px;
+  }
 }
 section.card-row {
   display: flex;
@@ -740,6 +762,7 @@ section.text #particles-js {
 }
 section.text #particles-js .overlay {
   position: absolute;
+  inset: 0;
   text-align: center;
   padding-top: 100px;
   height: 0;
@@ -772,6 +795,11 @@ section.text #particles-js .overlay .profile {
   width: min(100%, 229px);
   gap: 0 16px;
   text-align: start;
+}
+@media (max-width: 768px) {
+  section.text #particles-js .overlay .profile {
+    align-items: center;
+  }
 }
 section.text #particles-js .overlay .profile h5, section.text #particles-js .overlay .profile small {
   transition: color 0.5s;

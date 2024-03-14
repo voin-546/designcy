@@ -9,7 +9,7 @@
     font-family: "Work Sans";
 }
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top:v 100px;
 }
 ::-webkit-scrollbar {
     background: transparent;
@@ -48,7 +48,7 @@ body {
             section {
                 &.hero-area {
                     header {
-                        backdrop-filter: blur(100px);
+                        backdrop-filter: blur(5px);
                         background-color: transparent;
                         a.logo {
                             color: #fff;
@@ -216,12 +216,12 @@ section {
                 padding: 0 10px;
             }
             &.show {
-                height: 420px;
+                height: 440px;
                 @media (min-width: 1051px) {
                     height: 80px;
                 }
                 nav {
-                    height: 340px;
+                    height: 360px;
                 }
             }
             a {
@@ -294,6 +294,7 @@ section {
                     transition: height .5s;
                     height: 0;
                     overflow: hidden;
+                    gap: 20px;
                 }
                 ul {
                     display: flex;
@@ -449,23 +450,27 @@ section {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media (max-width: 768px) {
+        @media (max-width: 1200px) {
             justify-content: center;
-        }
-        @media (min-width: 575px) and (max-width: 768px) {
             gap: 0 20px;
         }
-        @media (min-width: 769px) and (max-width: 842px) {
-            justify-content: center;
-            gap: 30px;
+        @media (max-width: 1120px) {
+            gap: 0 10px;
+        }
+        @media (min-width: 993px) and (max-width: 1060px) {
+            padding: 0 20%;
+            gap: 20px;
         }
         @media (min-width: 843px) and (max-width: 992px) {
             padding: 0 10%;
             gap: 20px;
         }
-        @media (min-width: 993px) and (max-width: 1060px) {
-            padding: 0 20%;
-            gap: 20px;
+        @media (min-width: 769px) and (max-width: 842px) {
+            justify-content: center;
+            gap: 30px;
+        }
+        @media (min-width: 575px) and (max-width: 768px) {
+            gap: 0 20px;
         }
         .card {
             text-align: center;
@@ -579,8 +584,16 @@ section {
             text-align: center;
             color: #fff;
             padding: 125px 0 128px;
+            svg {
+                @media (max-width: 768px) {
+                    scale: .7;
+                }
+            }
             @media (max-width: 768px) {
-                padding: 125px 20px 128px;
+                padding: 75px 20px;
+            }
+            @media (max-width: 575px) {
+                padding: 35px 10px;
             }
             h2 {
                 font: 700 38px/120% var(--font-family);
@@ -589,6 +602,9 @@ section {
                 width: min(100%, 765px);
                 font: 400 16px/160% var(--font-family);
                 margin: 20px auto 36px;
+                @media (max-width: 768px) {
+                    margin-block-end: 16px;
+                }
             }
         }
     }
@@ -671,6 +687,7 @@ section {
             }
             .overlay {
                 position: absolute;
+                inset: 0;
                 text-align: center;
                 padding-top: 100px;
                 height: 0;
@@ -696,6 +713,9 @@ section {
                     width: min(100%, 229px);
                     gap: 0 16px;
                     text-align: start;
+                    @media (max-width: 768px) {
+                        align-items: center;
+                    }
                     h5, small { transition: color .5s;}
                     h5 {
                         color: #4B4C4C;

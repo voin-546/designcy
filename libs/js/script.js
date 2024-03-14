@@ -1,8 +1,13 @@
 AOS.init({
     duration: 1200,
+});
+tippy(".back-to-top", {
+	content: "Back To Top",
+});
+tippy(".theme", {
+	content: "Change theme"
 })
 document.querySelectorAll(".nav-link").forEach((elem) => {
-
 	elem.onmouseenter =
 	elem.onmouseleave = (e) => {
 		const tolerance = 10;
@@ -13,7 +18,6 @@ document.querySelectorAll(".nav-link").forEach((elem) => {
 		if (x + tolerance > right) x = right;
 		elem.style.setProperty("--x", `${ x }px`);
 	}
-
 })
 let themeSwitcher = document.querySelector(".theme");
 var darkMode = false;
